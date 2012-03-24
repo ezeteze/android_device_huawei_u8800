@@ -34,4 +34,15 @@
     <!-- This device implements a noise suppression device for in call audio-->
     <bool name="has_in_call_noise_suppression">false</bool>
 
+  <!-- While an incoming call is ringing, this flag specifies whether
+         the BACK key should reject the current call (just like the
+         ENDCALL button does.)
+         This was originally the default behavior for all platforms, but
+         it's a bad idea on devices where the BACK key is a capacitive
+         button (since it's too easy to press the key accidentally as you
+         pull the phone out of your pocket.)  So devices that *don't* want
+         this behavior should set this flag to false via the resource
+         overlay.  -->
+    <bool name="allow_back_key_to_reject_incoming_call">false</bool>
+
 </resources>
